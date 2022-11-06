@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Angellyn218/tech-blog/issues"
   },
-  "homepage": "https://github.com/Angellyn218/tech-blog#readme",
+  "homepage": "https://post-on-tech-blog.herokuapp.com",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
