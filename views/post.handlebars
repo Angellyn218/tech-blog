@@ -1,14 +1,14 @@
 <section class="post">
   <div class="card">
-        <div class="card-header">
-          {{post.title}}
-          <p class="card-text"> {{post.date_created}} </p>
-        </div>
-        <div class="card-body">
-          <p class="card-text"> {{post.text}} </p>
-        </div>
-      </div>
-  <div class="comment">
+    <div class="card-header">
+      {{post.title}}
+      <p class="card-text"> {{post.date_created}} </p>
+    </div>
+    <div class="card-body">
+      <p class="card-text"> {{post.text}} </p>
+    </div>
+  </div>
+  <div class="comments">
     {{#each comments as |comment|}}
     {{> comment-details}}
     {{/each}}
