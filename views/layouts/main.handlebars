@@ -14,7 +14,11 @@
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Dashboard</a>
+            {{#if logged_in}}
             <a class="nav-item nav-link" href="#">Logout</a>
+            {{else}}
+            <a class="nav-item nav-link" href="#">Login</a>
+            {{/if}}
           </div>
         </div>
       </nav>
@@ -22,7 +26,9 @@
     <main>
       {{body}}
     </main>
-
+    {{#if logged_in}}
+    <script src="#"></script>
+    {{/if}}
   
   </body>
 </html>
