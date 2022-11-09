@@ -1,12 +1,14 @@
 <form class="m-4">
   <div class="form-group">
-    <label for="title">Post Title</label>
-    <textarea class="form-control" id="title" row="1" placeholder="Enter title">{{title}}</textarea>
+    <label for="post-title">Post Title</label>
+    <textarea class="form-control" id="post-title" row="1" placeholder="Enter title">{{title}}</textarea>
   </div>
   <div class="form-group">
-    <label for="text">Post Text</label>
-    <textarea class="form-control" id="text" rows="8" placeholder="Enter text">{{text}}</textarea>
+    <label for="post-text">Post Text</label>
+    <textarea class="form-control" id="post-text" rows="8" placeholder="Enter text">{{text}}</textarea>
   </div>
-  <button id="update-post" type="submit" class="btn btn-primary">Update post</button>
-  <button id="delete-post" type="submit" class="btn btn-primary">Delete post</button>
+  <button id="update-post" type="submit" class="btn btn-primary" data-id="{{id}}">Update post</button>
+  <button id="delete-post" type="submit" class="btn btn-primary" data-id="{{id}}">Delete post</button>
 </form>
+
+<script src="/js/update-delete-post.js"></script>
