@@ -113,4 +113,37 @@ router.get('/posts/:id', withAuth, async (req, res) => {
     }
 })
 
+router.get('/home/post/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                },
+                {
+                    model: Comment
+                }
+            ],
+        });
+
+        const post = postData.get({ plain: true });
+        console.log(post);
+
+        const page_name = "Post by " + post.user.username;
+
+        res.render('post', {
+            ...post,
+            logged_in: true,
+            add_comment: true,
+            page_name: page_name,
+            page_title: "Dashboard"
+        });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+
 module.exports = router;
