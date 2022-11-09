@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Category } = require('../../../ecommerce-back-end/models');
-const { Post, Comment } = require('../../models');
+const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
