@@ -92,6 +92,7 @@ router.get('/posts/new', (req, res) => {
     }
   
     res.render('new-post', {
+        logged_in: true,
         page_name: "Create New Post",
         title: "The Tech Blog"
     });
