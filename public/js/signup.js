@@ -5,7 +5,7 @@ const signupFormHandler = async (event) => {
     const password = document.querySelector('#signup-password').value.trim();
   
     if (username && password) {
-      const response = await fetch('/api/users', {
+      const response = await fetch('/api/users/', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -21,4 +21,4 @@ const signupFormHandler = async (event) => {
 
 document
   .querySelector('#signup')
-  .addEventListener('submit', loginFormHandler);
+  .addEventListener('submit', signupFormHandler);

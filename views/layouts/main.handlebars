@@ -15,7 +15,7 @@
             <a class="nav-item nav-link" href="/">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
             {{#if logged_in}}
-            <a class="nav-item nav-link" href="/api/users/logout">Logout</a>
+            <li id="logout" class="nav-item nav-link">Logout</li>
             {{else}}
             <a class="nav-item nav-link" href="/login">Login</a>
             {{/if}}
@@ -27,7 +27,7 @@
       {{{body}}}
     </main>
     {{#if logged_in}}
-    <script src="#"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
   
   </body>
