@@ -1,11 +1,13 @@
-<form class="m-4">
+<form id="login" class="m-4">
   <div class="form-group">
     <label for="input-username">Username</label>
-    <input type="input" class="form-control" id="input-username" placeholder="Enter username">
+    <input type="input" class="form-control" id="login-username" placeholder="Enter username">
   <div class="form-group">
     <label for="input-password">Password</label>
-    <input type="password" class="form-control" id="input-password" placeholder="Password">
+    <input type="password" class="form-control" id="login-password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-  <a href="/signup"><small id="login" class="form-text">sign up instead</small></a>
+  <button id="login-btn" type="submit" class="btn btn-primary">Login</button>
+  <a href="/signup"><small  class="form-text">sign up instead</small></a>
 </form>
+
+<script src="./js/login.js"></script>
