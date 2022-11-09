@@ -7,6 +7,12 @@ router.get('/', async (req, res) => {
         const postData = await Post.findAll({
             order: [
                 ['date_created', 'DESC']
+            ],
+            include: [
+                {
+                  model: User,
+                  attributes: ['username'],
+                },
             ]
         });
 
@@ -70,11 +76,26 @@ router.get('/signup', (req, res) => {
       res.redirect('/dashboard');
       return;
     }
-  
+
     res.render('signup', {
         page_name: "Sign Up",
         title: "The Tech Blog"
     });
+
+});
+
+router.get('/posts/new', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
+    if (!req.session.logged_in) {
+      res.redirect('/login');
+      return;
+    }
+  
+    res.render('new-post', {
+        page_name: "Create New Post",
+        title: "The Tech Blog"
+    });
+    
 });
 
 module.exports = router;
