@@ -48,15 +48,21 @@ On either the signup and login, fill out your username and password, then press 
 
 To create a new post, click on the "+ Post" button.
 
-This will bring you to a form where you can write a post, then press the button to create it.
+This will bring you to a form where you can write a post, then press the button to create it. You will then be redirected back to the dashboard.
 
 ![create post page](assets/images/create-post.png)
 
-To update or delete a post, click on the post.
+To update or delete a post, click on the post. 
 
-This will bring you to a form where you can edit a post, then press the button update it or delete it.
+This will bring you to a form where you can edit a post, then press the button update it or delete it. You will then be redirected back to the dashboard.
 
 ![update/delete post page](assets/images/update-delete.png)
+
+To view a post from the homepage, click on it. This will bring you to a page where you can view the posts and its associated comments. 
+
+![post from hompage and its comments](assets/images/home-post.png)
+
+To logout, press the logout button in the navbar.
 
 ## Credits
 
